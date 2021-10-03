@@ -566,7 +566,7 @@ jobs:
                   echo 'export DEBUG="<< parameters.debug >>"' >> $BASH_ENV
 
       - when:
-          condition: << parameters.parallel >> << parameters.attach-workspace >>
+          condition: << parameters.attach-workspace >>
           # user wants to run in parallel mode
           # thus we assume the dependencies were installed as separate job
           # hmm, can we detect if this job requires cypress/install automatically?
